@@ -1,26 +1,26 @@
 from dataclasses import dataclass, field
 
 @dataclass
-class Product:
+class Wine:
     """
-    A class representing a product with a unique ID and name.
+    A class representing a wine with a unique ID and name.
     """
     ID: int = field(default=0)
-    name: str = field(default="Unnamed Product")
+    name: str = field(default="Unnamed Wine")
     age: int = field(default=0)
 
     def __str__(self) -> str:
         """
         Magic method to return a string representation of the object.
         """
-        return f"Product[ID = {self.ID}, name = '{self.name}', age = {self.age}]"
+        return f"Wine[ID = {self.ID}, name = '{self.name}', age = {self.age}]"
 
     # Getter and Setter for ID
     def get_ID(self) -> int:
         """
         Getter for ID.
         Returns:
-            int: The unique ID for the product.
+            int: The unique ID for the wine.
         """
         return self.ID
 
@@ -40,7 +40,7 @@ class Product:
         """
         Getter for name.
         Returns:
-            str: The name of the product.
+            str: The name of the wine.
         """
         return self.name
 
@@ -60,7 +60,7 @@ class Product:
         """
         Getter for age.
         Returns:
-            int: The age of the product.
+            int: The age of the wine.
         """
         return self.age
 
